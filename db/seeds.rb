@@ -16,14 +16,17 @@ puts "Creating user-owners..."
 
 25.times do
 user = User.new(email: Faker::Internet.email, password: Faker::Internet.password, name: Faker::Name.name)
+user.save!
+puts "Users created"
 studio = Studio.new(name: Faker::Company.name , rate: rand(30..200), location: Faker::Address.city)
-user.studio = studio
+studio.user = user
+studio.save!
 end
 
 puts "Creating users..."
 
 25.times do
-user = User.new(email: Faker::Internet.email, password: Faker::Internet.password, name: Faker::Name.name)
+user = User.create!(email: Faker::Internet.email, password: Faker::Internet.password, name: Faker::Name.name)
 end
 
 puts "Done!"
