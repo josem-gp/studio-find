@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/6538903/pexels-photo-6538903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
   <div class="container">
     <h1>Studios</h1>
   </div>
@@ -8,10 +8,15 @@
     <% @studios.each do |studio| %>
       <div class="card-body">
         <%# <%= image = studio.image %>
-        <h5 class="card-title"><%= studio.name %></h5>
-        <p class="card-text"><%= "Address: #{studio.location}" %></p>
-        <p class="card-text"><%= "Rate: $#{studio.rate} per hour" %></p>
-        <%= link_to "Select", studio_path(studio), class: "btn btn-primary" %>
+        <img src="https://images.pexels.com/photos/1029796/pexels-photo-1029796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width="240px" height="240px" alt="image">
+        <p class="card-title mb-0 mt-1 font-weight-bold"><%= studio.name %></p>
+        <p class="card-text mb-0"><%= "Address: #{studio.location}" %></p>
+        <div class="select d-flex justify-content-between">
+          <p class="card-text mb-0"><%= "Rate: $#{studio.rate} per hour" %></p>
+          <%= link_to studio_path(studio) do %>
+            <i class="fas fa-arrow-circle-right"></i>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>
