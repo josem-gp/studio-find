@@ -1,0 +1,7 @@
+<div class="cards container mt-5">
+  <% @bookings.each do |booking| %>
+  <%= "Start date/time: #{booking.start_date}"%>
+  <%= "End date/time: #{booking.end_date}"%>
+  <%= "Booking status: #{booking.status ? puts "Confirmed" : puts "Uncomfirmed"}"%>
+  <% end %>
+</div>
