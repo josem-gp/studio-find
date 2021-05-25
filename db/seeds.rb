@@ -21,6 +21,8 @@ puts "Users created"
 studio = Studio.new(name: Faker::Company.name , rate: rand(30..200), location: Faker::Address.city)
 studio.user = user
 studio.save!
+
+puts "Studio created"
 end
 
 puts "Creating users..."
