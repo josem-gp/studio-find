@@ -11,3 +11,21 @@
     margin-bottom: 16px;
   }
 }
+
+.card-body {
+  p {
+    margin-bottom: 4px;
+    margin-left: 4px;
+    color: black;
+  }
+}
+
+.edit-booking {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+i {
+  margin: 0 4px;
+}
