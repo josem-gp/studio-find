@@ -1,9 +1,19 @@
+<div class="banner text-center">
+  <h1><%= @studio.name %></h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <%# <% @studio.images.each do |image| %>
+      <%# <%= cl_image_tag("#{image}", :width => 400, :crop => "pad") %>
+      <%# <% end %>
+      <p><%= "Address: #{@studio.location}" %></p>
+      <p><%= "Rate: #{@studio.rate}" %></p>
+    </div>
+    <div class="col-md-4">
+      <h3>Booking Form:</h3>
+      <%= render 'shared/form' %>
+    </div>
+  </div>
+</div>
 
-
-<h1><%= @studio.name %></h1>
-
-<p><%= @studio.rate %></p>
-<p><%= @studio.location %></p>
-
-
-<%= render 'shared/form' %>
