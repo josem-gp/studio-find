@@ -4,7 +4,7 @@ class StudiosController < ApplicationController
     @studios = policy_scope(Studio)
     authorize @studios
   end
-
+  
   def show
     @studio = Studio.find(params[:id])
     @booking = Booking.new

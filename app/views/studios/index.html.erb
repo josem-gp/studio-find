@@ -1,4 +1,18 @@
-<h1>Studios</h1>
-<% @studios.each do |studio| %>
-<%= link_to studio.name, studio_path(studio) %>
-<% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('');">
+  <div class="container">
+    <h1>Studios</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="cards">
+    <% @studios.each do |studio| %>
+      <div class="card-body">
+        <%# <%= image = studio.image %>
+        <h5 class="card-title"><%= studio.name %></h5>
+        <p class="card-text"><%= "Address: #{studio.location}" %></p>
+        <p class="card-text"><%= "Rate: $#{studio.rate} per hour" %></p>
+        <%= link_to "Select", studio_path(studio), class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
