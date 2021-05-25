@@ -6,6 +6,24 @@
 }
 
 .card-body {
-  border: 1px solid black;
+  width: 280px;
   border-radius: 8px;
+  transition: transform opacity 500ms ease;
+  opacity: 0.5;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 1px 1px 0px 1px rgba(43, 43, 43, .1);
+}
+
+.card-body p {
+  font-size: 14px;
+}
+
+.card-body:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+.card-text .card-title {
+  margin-bottom: 0;
 }

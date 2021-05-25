@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container">
   <h3>My Bookings</h3>
 </div>
 
@@ -9,6 +9,10 @@
     <p><strong>Check-In:</strong><br><%= "#{(booking.start_date).strftime('%b %dth, %Y %H:%M')}"%></p>
     <p><strong>Check-Out:</strong><br><%= "#{(booking.end_date).strftime('%b %dth, %Y %H:%M')}"%></p>
     <p><strong>Status:</strong> <%= "#{booking.status ? "Confirmed" : "Pending"}"%></p>
+    <div class="edit-booking">
+      <p>EDIT<i class="far fa-edit"></i></p>
+      <p>CANCEL<i class="far fa-window-close"></i></p>
+    </div>
   </div>
   <% end %>
 </div>
