@@ -1,6 +1,4 @@
-<div class="banner text-center">
-  <h1><%= @studio.name %></h1>
-</div>
+<%= render 'shared/banner', studio: @studio.name, img_path: 'studio.jpg' %>
 <div class="container">
   <div class="row">
     <div class="col-md-8">
@@ -11,8 +9,10 @@
       <p><%= "Rate: #{@studio.rate}" %></p>
     </div>
     <div class="col-md-4">
-      <h3>Booking Form:</h3>
-      <%= render 'shared/form' %>
+      <div class="form"></div>
+        <h3>Book your Studio:</h3>
+        <%= render 'shared/form' %>
+      </div>
     </div>
   </div>
 </div>
