@@ -1,7 +1,14 @@
+<div class="container mt-5">
+  <h3>My Bookings</h3>
+</div>
+
 <div class="cards container mt-5">
   <% @bookings.each do |booking| %>
-  <%= "Start date/time: #{booking.start_date}"%>
-  <%= "End date/time: #{booking.end_date}"%>
-  <%= "Booking status: #{booking.status ? "Confirmed" : "Uncomfirmed"}"%>
+  <div class="card-body">
+    <h5>Booking Schedule</h5>
+    <p><strong>Check-In:</strong><br><%= "#{(booking.start_date).strftime('%b %dth, %Y %H:%M')}"%></p>
+    <p><strong>Check-Out:</strong><br><%= "#{(booking.end_date).strftime('%b %dth, %Y %H:%M')}"%></p>
+    <p><strong>Status:</strong> <%= "#{booking.status ? "Confirmed" : "Pending"}"%></p>
+  </div>
   <% end %>
 </div>
