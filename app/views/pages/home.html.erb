@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+  <div class="container">
+    <h1><i class="fas fa-home banner-icon"></i>StudioFind</h1>
+    <p>Discover new studios wherever you live</p>
+    <div class="input-group banner-search">
+      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+        aria-describedby="search-addon" />
+        <%= link_to studios_path do %>
+      <button type="button" class="btn btn-outline-primary">search</button>
+      <% end %>
+    </div>
+  </div>
+</div>
