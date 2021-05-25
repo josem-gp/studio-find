@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking)
   end
 
   def new
@@ -11,6 +11,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.studio = Studio.find(params[:studio_id])
+    authorize @booking
     if @booking.save
       redirect_to bookings_path
     else
