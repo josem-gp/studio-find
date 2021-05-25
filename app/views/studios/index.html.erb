@@ -9,8 +9,8 @@
       <div class="card-body">
         <%# <%= image = studio.image %>
         <h5 class="card-title"><%= studio.name %></h5>
-        <p class="card-text"><%= studio.location %></p>
-        <p class="card-text"><%= studio.rate %></p>
+        <p class="card-text"><%= "Address: #{studio.location}" %></p>
+        <p class="card-text"><%= "Rate: $#{studio.rate} per hour" %></p>
         <%= link_to "Select", studio_path(studio), class: "btn btn-primary" %>
       </div>
     <% end %>
