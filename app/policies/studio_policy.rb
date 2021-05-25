@@ -1,7 +1,7 @@
 class StudioPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      Studio.all
+      scope.all
     end
   end
 
