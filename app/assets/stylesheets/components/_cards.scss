@@ -7,10 +7,12 @@
 
 .card-body {
   width: 280px;
-  border: 1px solid black;
   border-radius: 8px;
   transition: transform opacity 500ms ease;
   opacity: 0.5;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 1px 1px 0px 1px rgba(43, 43, 43, .1);
 }
 
 .card-body p {
