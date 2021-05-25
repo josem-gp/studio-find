@@ -3,4 +3,5 @@ class Studio < ApplicationRecord
   validates :name, presence: true
   validates :location, presence: true
   validates :rate, presence: true
+  has_many_attached :photos
 end
