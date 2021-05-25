@@ -6,6 +6,22 @@
 }
 
 .card-body {
+  width: 280px;
   border: 1px solid black;
   border-radius: 8px;
+  transition: transform opacity 500ms ease;
+  opacity: 0.5;
+}
+
+.card-body p {
+  font-size: 14px;
+}
+
+.card-body:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+.card-text .card-title {
+  margin-bottom: 0;
 }
