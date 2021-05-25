@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.studio = params[:id]
+    @booking.studio = Studio.find(params[:id])
     if @booking.save
       redirect_to bookings_path
     else
