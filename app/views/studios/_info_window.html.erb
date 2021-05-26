@@ -1,3 +1,5 @@
+<h2><%= studio.name %></h2>
+<p><%= studio.location %></p>
 <div class="map-info-container">
   <%= cl_image_tag(studio.photos.first.key, width: 184, height: 184, crop: :fill, class: "info-window-image") %>
   <h5><%= studio.name %></h5>
