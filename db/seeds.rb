@@ -38,7 +38,7 @@ user.save!
 
 cloudinary_http.each_with_index do |http, idx|
   file = URI.open(http)
-  studio = Studio.new(name: Faker::Company.name , rate: rand(1000..10000), location: locations[idx])
+  studio = Studio.new(name: Faker::Company.name , rate: rand(800..3000), location: locations[idx])
   studio.photos.attach(io: file, filename: 'studio.jpg', content_type: 'image/jpg')
   studio.user = user
   studio.save!
