@@ -5,13 +5,18 @@
 
 .mapboxgl-popup-content {
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .map-info-container {
   margin-top: 8px;
   width: 184px;
+    h5 {
+      margin-bottom: 0;
+    }
 }
 
 .info-window-image {
-  margin-bottom: 16px;
+  margin-top: 8px;
+  margin-bottom: 12px;
 }
