@@ -39,13 +39,13 @@ puts "Creating user-owners..."
 user = User.new(email: Faker::Internet.email, password: Faker::Internet.password, name: Faker::Name.name)
 user.save!
 
-# cloudinary_http.each_with_index do |http, idx|
+cloudinary_http.each_with_index do |http, idx|
   file = URI.open(cloudinary_http[0])
   studio = Studio.new(name: Faker::Company.name , rate: rand(1000..10000), location: locations[0])
   studio.photos.attach(io: file, filename: 'studio.jpg', content_type: 'image/jpg')
   studio.user = user
   studio.save!
-# end
+end
 
 puts "Studio created"
 
