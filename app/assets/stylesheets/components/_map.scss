@@ -1,6 +1,9 @@
 #map {
   margin-left: 32px;
-  margin-top: 16px;
+  display: block;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
 }
 
 .mapboxgl-popup {
