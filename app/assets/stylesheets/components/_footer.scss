@@ -3,10 +3,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 80px;
   padding: 0px 20px;
   color: rgba(0,0,0,0.3);
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
 }
+
+/* flex changes in .footer abover are for footer sticky*/
 
 .footer-middle {
   text-align: center;
@@ -38,4 +43,18 @@
 }
 .footer-links a:hover {
   opacity: 0.8;
+}
+
+/* Changes below are for the footer sticky */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer-wrapper {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
 }
