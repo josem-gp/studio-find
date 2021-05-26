@@ -8,13 +8,13 @@
 require 'faker'
 require "open-uri"
 
-cloudinary_http = %w[https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006875/klthiyz26teayoovlpxb2dzhqpbs.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006872/3dspoyxeyw1p1f801ffi2py9b03t.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006869/dnlhxeaojy4n13e5bc1rb0kkdg3w.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006866/ymil6ijh0d3m8uukq78gqh9wf5t8.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006863/lga03ymz4tojk6j24dwfd59icrfm.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006860/cri99sdtn965eryqshqch2ayb5we.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006857/0alc1voqhac57uk1d75qe4xzke7q.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006854/8r5ejv4x1z8l4rxd5tq04z9jc25j.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006823/nxznbbdrbczwbidc2z1sw1twjy95.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006129/jyoa8c66c6poln8ccwjdhup9uywo.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006122/ybmxvkj8g330nacsu31vab1dhw0k.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006127/bluiqe9gacj94k8pcvwwzzhocv9i.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006124/3mztayh5kr18gahktgqk174opvhj.jpg]
+cloudinary_http = %w[https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005017/03s7d0wzreijr8ztbodx7m6ytvfg.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005020/szcknrej0o4qh5b3jbgq6kc6hvb0.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005703/od89qzjj2jggo4k0afd19ph3u69s.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009023/wdxrc8w9du32eofeukjbp969u9t5.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005700/4u81i8qdj7gl2we88e4ez77l7tdw.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009028/uqolnnbfq7nzzhzv93nnh9b5qm1g.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009022/968jt3ni57sh8i4b4h7veu2azfnc.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005025/mm2fnz4y65rqgkxagef1djz1qm6z.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009029/jdfm6bzp380pkonrvfwi9lz3z98c.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005022/5xrhm36wuh6k2iptglwrafkkmsxa.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009030/c2e8rwyn6vutc1lnfsxp5cl0bzdi.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005027/mxx24iz2g3uo1dg9lb3ls3g0kql9.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009027/9ob257ylx75twc8fwcv6carir4mq.jpg]
 
 locations = ['2-12-6 Meguro, Tokyo', '1-36-6 Meguro, Tokyo',
 '2-8-21 Meguro, Tokyo', '5-27-16 Meguro, Tokyo',
