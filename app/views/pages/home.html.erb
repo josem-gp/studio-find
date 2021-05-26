@@ -1,13 +1,45 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+<div class="banner banner-home" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1518611012118-696072aa579a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);">
   <div class="container">
     <h1><i class="fas fa-home banner-icon"></i>StudioFind</h1>
     <p>Discover new studios in your neighborhood</p>
     <div class="input-group banner-search">
       <input type="search" class="form-control rounded" placeholder="Location" aria-label="Search"
         aria-describedby="search-addon" />
-        <%= link_to studios_path do %>
-      <button type="button" class="btn btn-dark">find</button>
+      <%= link_to studios_path do %>
+        <button type="button" class="btn btn-dark">find</button>
       <% end %>
+    </div>
+  </div>
+</div>
+<div class="container cards-home-intro">
+  <h3>Become a finder and find your space with StudioFind</h3>
+  <i class="fas fa-music"></i>
+  <i class="fas fa-paint-brush"></i>
+  <i class="fas fa-book"></i>
+  <p>We all have different interests, but not all of us have the space for them. Whether you’re a yoga instructor who needs space for a class or just an artist who wants to work on their latest piece, StudioFind allows you find your studio.</p>
+</div>
+<div class="container cards-home-container mt-5">
+  <div class="card-reviews w-50">
+    <h5>What our finders have to say</h5>
+    <div class="card-product mt-3 rounded">
+      <img src="https://images.pexels.com/photos/7671745/pexels-photo-7671745.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" />
+      <div class="card-product-infos">
+        <h2><em>"Not only are rental studios more expensive, they’re also further away. StudioFind allows me to find cheaper and more convenient locations for me and my students."</em></h2>
+        <p>Sergio Daniel – Contemporary dance instructor</p>
+      </div>
+    </div>
+    <div class="card-product mt-3 rounded">
+      <img src="https://images.pexels.com/photos/6647687/pexels-photo-6647687.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+      <div class="card-product-infos">
+        <h2><em>"Playing instruments isn’t allowed in my apartment building. I managed to find a nice studio in my neighborhood for times when I have to do a bit of extra practice for rehearsals. StudioFind is great when you need it."</em></h2>
+        <p>Grace Kim – Musician</p>
+      </div>
+    </div>
+  </div>
+  <div class="card-create-provider">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/112811/pexels-photo-112811.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)">
+      <div class="w-50">Become a provider and share your studio</div>
+      <div class="mt-5"><%= link_to "Get started", new_user_registration_path, class: "btn btn-dark rounded" %></div>
     </div>
   </div>
 </div>
