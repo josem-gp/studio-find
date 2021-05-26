@@ -11,7 +11,7 @@
         <p class="card-title mb-0 mt-1 font-weight-bold"><%= studio.name %></p>
         <p class="card-text mb-0"><%= "Address: #{studio.location}" %></p>
         <div class="select d-flex justify-content-between">
-          <p class="card-text mb-0"><%= "Rate: $#{studio.rate} per hour" %></p>
+          <p class="card-text mb-0"><%= "Rate: ¥#{studio.rate} per hour" %></p>
           <%= link_to studio_path(studio) do %>
             <i class="fas fa-arrow-circle-right"></i>
           <% end %>
