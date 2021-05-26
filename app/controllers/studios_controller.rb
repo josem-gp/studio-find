@@ -7,6 +7,7 @@ class StudiosController < ApplicationController
       {
         lat: studio.latitude,
         lng: studio.longitude
+        # info_window: render_to_string(partial: "info_window", locals: { studio: studio })
       }
     end
   end
