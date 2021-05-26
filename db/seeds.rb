@@ -8,16 +8,21 @@
 require 'faker'
 require "open-uri"
 
-cloudinary_http = %w[https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996450/Studios-seed/studio4_jqhfte.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996450/Studios-seed/studio1_hs7hww.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996442/Studios-seed/studio8_ml8msg.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996442/Studios-seed/studio7_uglnuo.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996442/Studios-seed/studio6_zxvwoh.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996441/Studios-seed/studio5_xeiehr.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996441/Studios-seed/studio9_dnolba.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996441/Studios-seed/studio10_xvoe7a.jpg]
+cloudinary_http = %w[https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006875/klthiyz26teayoovlpxb2dzhqpbs.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006872/3dspoyxeyw1p1f801ffi2py9b03t.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006869/dnlhxeaojy4n13e5bc1rb0kkdg3w.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006866/ymil6ijh0d3m8uukq78gqh9wf5t8.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006863/lga03ymz4tojk6j24dwfd59icrfm.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006860/cri99sdtn965eryqshqch2ayb5we.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006857/0alc1voqhac57uk1d75qe4xzke7q.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006854/8r5ejv4x1z8l4rxd5tq04z9jc25j.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006823/nxznbbdrbczwbidc2z1sw1twjy95.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006129/jyoa8c66c6poln8ccwjdhup9uywo.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006122/ybmxvkj8g330nacsu31vab1dhw0k.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006127/bluiqe9gacj94k8pcvwwzzhocv9i.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622006124/3mztayh5kr18gahktgqk174opvhj.jpg]
 
 locations = ['2-12-6 Meguro, Tokyo', '1-36-6 Meguro, Tokyo',
 '2-8-21 Meguro, Tokyo', '5-27-16 Meguro, Tokyo',
 '6-18-11 Meguro, Tokyo', '2-24-3 Meguro, Tokyo',
-'4-23-19 Meguro, Tokyo', '1-26-11 Meguro, Tokyo']
+'4-6-6 Meguro, Tokyo', '1-3-25 Meguro, Tokyo',
+'1-11-18 Meguro, Tokyo', '2-4-36 Meguro, Tokyo',
+'5-24-53 Meguro, Tokyo', '4-1-1 Meguro, Tokyo',
+'5-17-8 Meguro, Tokyo']
 
 puts "Deleting database..."
 

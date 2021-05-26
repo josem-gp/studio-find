@@ -1,3 +1,12 @@
+<<<<<<< HEAD
 <h2><%= studio.name %></h2>
 <p><%= studio.location %></p>
+=======
+<div class="map-info-container">
+  <%= cl_image_tag(studio.photos.first.key, width: 184, height: 184, crop: :fill, class: "info-window-image") %>
+  <h5><%= studio.name %></h5>
+  <p><%= studio.location %></p>
+  <%= link_to 'View Studio', studio_path(studio.id), class: 'btn-gradient' %>
+</div>
+>>>>>>> 2ee4d2bac88d918ec0c780b59accd66763ea529e
 
