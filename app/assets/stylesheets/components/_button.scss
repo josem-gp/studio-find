@@ -12,16 +12,22 @@
   background: linear-gradient($light-blue, $sea-blue)
 }
 
+.btn-un-blue {
+  color: $un-blue;
+}
+
 .btn-booking-confirm {
-  background-color: $sea-blue;
+  background-color: $un-blue;
   width: 88px;
   height: 32px;
   border-radius: 16px;
   margin: 0 4px;
   text-align: center;
   border: none;
+  opacity: .85;
+  transition: opacity 500ms ease;
 }
 
 .btn-booking-confirm:hover {
-  background-color: $mint-green;
+  opacity: 1;
 }
