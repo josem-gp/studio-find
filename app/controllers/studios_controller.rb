@@ -9,6 +9,7 @@ class StudiosController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { studio: studio })
       }
     end
+
   end
 
   def show

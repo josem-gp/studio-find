@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 require "open-uri"
 
 cloudinary_http_lena = %w[https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005017/03s7d0wzreijr8ztbodx7m6ytvfg.jpg
