@@ -2,16 +2,7 @@
   <div class="container">
     <h1><i class="fas fa-home banner-icon"></i>StudioFind</h1>
     <p>Discover new studios in your neighborhood</p>
-    <div class="banner-search rounded">
-      <%= form_tag studios_path, class: "d-flex", method: :get do %>
-        <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a studio"
-      %>
-        <%= submit_tag "find", class: "btn btn-dark" %>
-      <% end %>
-    </div>
+    <%= render "shared/search" %>
   </div>
 </div>
 </div>
@@ -20,7 +11,7 @@
   <i class="fas fa-music"></i>
   <i class="fas fa-paint-brush"></i>
   <i class="fas fa-book"></i>
-  <p>We all have different interests, but not all of us have the space for them. Whether you’re a yoga instructor who needs space for a class or just an artist who wants to work on their latest piece, StudioFind allows you find your studio.</p>
+  <p>We all have different interests, but not all of us have the space for them. Whether you’re a yoga instructor who needs space for a class or an artist who wants to work on their latest piece, StudioFind allows you to find your studio.</p>
 </div>
 <div class="container cards-home-container mt-5">
   <div class="card-reviews w-50">
