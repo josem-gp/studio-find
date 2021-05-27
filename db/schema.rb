@@ -58,6 +58,9 @@ ActiveRecord::Schema.define(version: 2021_05_27_080714) do
     t.string "images"
     t.float "latitude"
     t.float "longitude"
+    t.integer "area"
+    t.integer "capacity"
+    t.text "description"
     t.index ["user_id"], name: "index_studios_on_user_id"
   end
 
