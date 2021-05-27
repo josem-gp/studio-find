@@ -3,13 +3,14 @@
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background-color: #145BA3;
+  background-color: $blue;
   transition: background-color 500ms ease;
   border: none;
+  opacity: .85;
 }
 
 .btn-gradient:hover {
-  background-color: #3282D1;
+  opacity: 1;
   color: $black;
   text-decoration: none;
 }
