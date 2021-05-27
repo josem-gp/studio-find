@@ -9,4 +9,8 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :encrypted_password, presence: true, length: { minimum: 6 }
   validates :name, presence: true
+
+  def owner?
+    user.studio.any?
+  end
 end
