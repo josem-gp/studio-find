@@ -8,4 +8,12 @@ class Owner::BookingPolicy < ApplicationPolicy
   def index?
     true
   end
+
+  def edit?
+    user.bookings_as_owner.include?(record)
+  end
+
+  def update?
+    user.bookings_as_owner.include?(record)
+  end
 end

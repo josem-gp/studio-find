@@ -1,9 +1,13 @@
 index.html.erb
 
-<div><% @bookings.each do |b| %>
-  <p><%= b.user.name %> </p>
-<% end %>
+<div>
+  <% @bookings.each do |b| %>
+  <p><%= b.id %> </p>
+  <p><%= b.status %> </p>
+  <% end %>
 </div>
+
+
 
 
 

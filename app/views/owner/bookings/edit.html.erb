@@ -1,0 +1,6 @@
+edit.html.erb
+
+<%= simple_form_for([:owner, @booking])  do |f| %>
+  <%= f.input :status, as: :select %>
+  <%= f.submit "Confirm Booking" %>
+<% end %>
