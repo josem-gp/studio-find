@@ -18,6 +18,10 @@ https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009029/jdfm6bzp380pkonrvf
 https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009030/c2e8rwyn6vutc1lnfsxp5cl0bzdi.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005027/mxx24iz2g3uo1dg9lb3ls3g0kql9.jpg
 https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009027/9ob257ylx75twc8fwcv6carir4mq.jpg]
 
+description_lena = ""
+
+description_kenn = ""
+
 locations_lena = ['2-12-6 Meguro, Tokyo', '1-36-6 Meguro, Tokyo',
 '2-8-21 Meguro, Tokyo', '5-27-16 Meguro, Tokyo',
 '6-18-11 Meguro, Tokyo']
@@ -41,7 +45,7 @@ user.save!
 
 cloudinary_http_lena.each_with_index do |http, idx|
   file = URI.open(http)
-  studio = Studio.new(name: Faker::Company.name , rate: rand(800..3000), location: locations_lena[idx])
+  studio = Studio.new(name: Faker::Company.name , rate: rand(800..3000), location: locations_lena[idx], capacity: rand(5..20), area: rand(20..60))
   studio.photos.attach(io: file, filename: 'studio.jpg', content_type: 'image/jpg')
   studio.user = user
   studio.save!
