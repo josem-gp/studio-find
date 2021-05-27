@@ -3,12 +3,11 @@
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient($normal-green, $light-green);
+  background: linear-gradient($mint-green, $light-blue);
   transition: background 500ms ease;
-  border: 1px solid $light-green;
+  border: 1px solid $light-blue;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient($dark-green, $normal-green);
-  color: $white;
+  background: linear-gradient($light-blue, $sea-blue)
 }
