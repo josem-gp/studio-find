@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   resources :bookings, only: [:index, :edit, :update]
   namespace :owner do
     resources :studios, except: [:show]
-    resources :bookings, only: [:edit, :update]
+    resources :bookings, only: [:index, :update]
   end
 end
