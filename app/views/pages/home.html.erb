@@ -3,7 +3,7 @@
     <h1><i class="fas fa-home banner-icon"></i>StudioFind</h1>
     <p>Discover new studios in your neighborhood</p>
     <div class="banner-search rounded">
-      <%= form_tag studios_path, method: :get do %>
+      <%= form_tag studios_path, class: "d-flex", method: :get do %>
         <%= text_field_tag :query,
       params[:query],
       class: "form-control",
