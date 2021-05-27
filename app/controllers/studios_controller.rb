@@ -1,6 +1,7 @@
 class StudiosController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
+    @place = params[:query]
     @studios = params[:query].present? ? policy_scope(Studio).global_search(params[:query]) : policy_scope(Studio)
     @markers = @studios.geocoded.map do |studio|
       {
