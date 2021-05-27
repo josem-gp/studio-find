@@ -4,7 +4,7 @@
   height: 8vh;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 5;
 
 
   .nav-link {
@@ -25,4 +25,9 @@
 
 .navbar-logo, li {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.navbar-left {
+  display: flex;
+  justify-content: space-between;
 }
