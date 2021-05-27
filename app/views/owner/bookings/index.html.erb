@@ -7,16 +7,20 @@
     </div>
     <div class="cards-owner-booking-grow">
       <p><strong><%= b.studio.name %> </strong></p>
-      <p>Booked by: <%= b.user.name %> </p>
+      <p><em>Booked by: <%= b.user.name %></em></p>
       <p><i class="far fa-calendar-alt"></i> <%= b.start_date.strftime('%b %dth, %Y %H:%M') %> ~ <%= b.end_date.strftime('%b %dth, %Y %H:%M') %></p>
-      <p><%= b.status %></p>
+      <p><em><%= b.status.capitalize %></em></p>
     </div>
-    <div class="p-3 mr-3">
+    <div class="cards-confirmation">
       <% if b.pending? %>
         <p class="mb-2">Confirm Booking?</p>
         <%= simple_form_for(b, remote: true, url: owner_booking_path(b)) do |f| %>
-          <%= f.input :status, as: :hidden, input_html: { value: 'confirmed' } %>
-          <%= f.submit "Confirm Booking", class: "btn-booking-confirm" %>
+          <div class="d-flex">
+            <%= f.input :status, as: :hidden, input_html: { value: 'confirmed' } %>
+            <%= f.submit "Confirm", class: "btn-booking-confirm" %>
+            <%= f.input :status, as: :hidden, input_html: { value: 'denied' } %>
+            <%= f.submit "Reject", class: "btn-booking-confirm" %>
+          </div>
         <% end %>
       <% end %>
     </div>
