@@ -2,16 +2,15 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 p-5">
-      <div class="card-text mb-3 py-3">
-        <h2 class="fw-bold">Details</h2>
-        <p class="m-0"><%= "🏠Address: #{@studio.location}" %></p>
-        <p class="m-0"><%= "💴Rate per hour: #{@studio.rate} yen" %></p>
+      <div class="card-details">
+        <p><i class="fas fa-home"></i> </p>
+        <p><i class="fas fa-users"></i> </p>
+        <p><i class="fas fa-map-marked-alt"></i> <%= @studio.location %></p>
+        <p><i class="fas fa-yen-sign"></i> <%= @studio.rate %> per hour</p>
       </div>
       <div class="card-description">
       <h2 class="fw-bold">Description</h2>
-      <p class="m-0">Strategically located in the city center, easy access from the nearest station.</p>
-      <p class="m-0">Large space accommodating up to 50 people at once.</p>
-      <p class="m-0">Suitable for yoga classes, events, family caterings etc.</p>
+      <p class="m-0">studio.desription</p>
       </div>
     </div>
     <div class="form form-shadow col-md-4">
