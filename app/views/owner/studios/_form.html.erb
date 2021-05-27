@@ -1,0 +1,8 @@
+<%= simple_form_for @studio, url: owner_studios_path do |f| %>
+  <%= f.input :name %>
+  <%= f.input :location %>
+  <%= f.input :rate %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.input :description %>
+  <%= f.submit "Add a Studio", class: "btn-gradient" %>
+<% end %>

@@ -1,13 +1,30 @@
 .btn-gradient {
-  color: $black;
+  color: $white;
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient($mint-green, $light-blue);
-  transition: background 500ms ease;
-  border: 1px solid $light-blue;
+  background-color: #145BA3;
+  transition: background-color 500ms ease;
+  border: none;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient($light-blue, $sea-blue)
+  background-color: #3282D1;
+  color: $black;
+  text-decoration: none;
+}
+
+.btn-black {
+  color: $white;
+  background-color: $black;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: none;
+  opacity: .85;
+}
+
+.btn-black:hover {
+  opacity: 1;
+  transition: background-color opacity 500ms ease;
 }
