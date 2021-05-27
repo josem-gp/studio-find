@@ -9,18 +9,17 @@
       <p><strong><%= b.studio.name %> </strong></p>
       <p>Booked by: <%= b.user.name %> </p>
       <p><i class="far fa-calendar-alt"></i> <%= b.start_date.strftime('%b %dth, %Y %H:%M') %> ~ <%= b.end_date.strftime('%b %dth, %Y %H:%M') %></p>
-      <% if b.status %>
-      <p><em>Confirmed</em></p>
-      <% else %>
-      <p><em>Pending</em></p>
-      <% end %>
+      <p><%= b.status %></p>
     </div>
     <div class="p-3 mr-3">
-      <% unless b.status %>
-      <p class="mb-2">Confirm Booking?</p>
-      <div class="btn-booking-confirm">YES</div>
+      <% if b.pending? %>
+        <p class="mb-2">Confirm Booking?</p>
+        <%= simple_form_for(b, remote: true, url: owner_booking_path(b)) do |f| %>
+          <%= f.input :status, as: :hidden, input_html: { value: 'confirmed' } %>
+          <%= f.submit "Confirm Booking", class: "btn-booking-confirm" %>
+        <% end %>
       <% end %>
     </div>
-  </div>
+    </div>
   <% end %>
 </div>
