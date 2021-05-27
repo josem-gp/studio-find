@@ -11,3 +11,17 @@
 .btn-gradient:hover {
   background: linear-gradient($light-blue, $sea-blue)
 }
+
+.btn-booking-confirm {
+  background-color: $sea-blue;
+  width: 88px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-booking-confirm:hover {
+  background-color: $mint-green;
+}

@@ -1,6 +1,26 @@
-<div>
+<div class="container">
+  <h5 class="my-4 mx-1">Your Studios' Bookings</h5>
   <% @bookings.each do |b| %>
-  <p><%= b.id %> </p>
-  <p><%= b.status %> </p>
+  <div class="cards-owner-booking">
+    <div>
+      <%= cl_image_tag(b.studio.photos.first.key, width: 240, height: 120, crop: :fill, class: "image-owner-booking") %>
+    </div>
+    <div class="cards-owner-booking-grow">
+      <p><strong><%= b.studio.name %> </strong></p>
+      <p>Booked by: <%= b.user.name %> </p>
+      <p><i class="far fa-calendar-alt"></i> <%= b.start_date.strftime('%b %dth, %Y %H:%M') %> ~ <%= b.end_date.strftime('%b %dth, %Y %H:%M') %></p>
+      <% if b.status %>
+      <p><em>Confirmed</em></p>
+      <% else %>
+      <p><em>Pending</em></p>
+      <% end %>
+    </div>
+    <div class="p-3 mr-3">
+      <% unless b.status %>
+      <p class="mb-2">Confirm Booking?</p>
+      <div class="btn-booking-confirm">YES</div>
+      <% end %>
+    </div>
+  </div>
   <% end %>
 </div>
