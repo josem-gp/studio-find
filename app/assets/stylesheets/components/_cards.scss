@@ -141,3 +141,32 @@
   }
 }
 
+.cards-owner-booking {
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 1px 1px 0px 1px rgba(43, 43, 43, .1);
+  margin: 8px 0;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    .image-owner-booking {
+      border-radius: 4px;
+      box-shadow: 0.5px 0.5px 0px 1px rgba(43, 43, 43, .1);
+    }
+}
+
+.cards-owner-booking-grow {
+  margin-left: 16px;
+  padding: 8px;
+  flex-grow: 1;
+    p {
+      margin-bottom: 1px;
+    }
+}
+
+.cards-confirmation {
+  padding: 8px;
+  margin-right: 16px;
+  text-align: center;
+}
