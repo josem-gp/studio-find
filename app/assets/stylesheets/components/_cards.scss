@@ -5,6 +5,7 @@
   padding: 16px 0;
 }
 
+// Booking index
 .booking-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -31,8 +32,22 @@
   opacity: 1;
 }
 
-.card-text .card-title {
-  margin-bottom: 0;
+// Studio show
+.card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 16px;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 16px;
+  i {
+    text-shadow: 0 0 2px $black;
+  }
+  p {
+    margin: 16px;
+  }
 }
 
 .card-product {
@@ -124,8 +139,4 @@
   p {
     margin: 0px 300px;
   }
-}
-
-.cards-owner-bookings {
-  border: 1px solid $black;
 }
