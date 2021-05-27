@@ -10,7 +10,6 @@ const showForm = () => {
     list.classList.remove("new-form-hidden");
   });
   }
-  console.log("DOUG")
 }
 
 export { showForm };
