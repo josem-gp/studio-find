@@ -3,17 +3,17 @@
     <h1>Studios Near Meguro</h1>
   </div>
 </div>
-<div class="container d-flex justify-content-between">
+<div class="container d-flex justify-content-between mt-5">
   <div class="cards">
     <% @studios.each do |studio| %>
       <div class="card-body">
         <%= cl_image_tag(studio.photos.first.key, width: 240, height: 300, crop: :fill) %>
-        <p class="card-title mb-0 mt-1 font-weight-bold"><%= studio.name %></p>
+        <p class="card-title mb-0 mt-3 font-weight-bold"><%= studio.name %></p>
         <p class="card-text mb-0"><%= "Address: #{studio.location}" %></p>
         <div class="select d-flex justify-content-between">
           <p class="card-text mb-0"><%= "Rate: ¥#{studio.rate} per hour" %></p>
           <%= link_to studio_path(studio) do %>
-            <i class="fas fa-arrow-circle-right"></i>
+            <i class="fas fa-arrow-circle-right text-success"></i>
           <% end %>
         </div>
       </div>
