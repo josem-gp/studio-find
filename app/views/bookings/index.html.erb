@@ -1,29 +1,42 @@
 <div class="container">
-  <h3>My Bookings</h3>
+  <h5 class="my-4 mx-1">My Bookings</h5>
+  <% @bookings.each do |b| %>
+  <div class="cards-owner-booking">
+    <div>
+      <%= cl_image_tag(b.studio.photos.first.key, width: 240, height: 120, crop: :fill, class: "image-owner-booking") %>
+    </div>
+    <div class="cards-owner-booking-grow">
+      <p><strong><%= b.studio.name %> </strong></p>
+      <p><em>Booked by: <%= b.studio.location %></em></p>
+      <p><i class="far fa-calendar-alt"></i> <%= b.start_date.strftime('%b %dth, %Y %H:%M') %> ~ <%= b.end_date.strftime('%b %dth, %Y %H:%M') %></p>
+      <p><em><%= b.status.capitalize %></em></p>
+    </div>
+    <div class="cards-confirmation">
+      <% if b.pending? %>
+        <div class="edit-booking">
+        <%= link_to edit_booking_path(b) do %>
+          <p>EDIT<i class="far fa-edit"></i></p>
+        <% end %>
+        <%= link_to booking_path(b), method: :delete, data: { confirm: "Are you sure?"} do %>
+          <p>CANCEL<i class="far fa-window-close"></i></p>
+        </div>
+      <% end %>
+    </div>
+      <% end %>
+    </div>
+    </div>
+  <% end %>
+
+  <div class = "container mt-5">
+    <%= link_to studios_path(query: params[:query]), class: "btn-gradient" do %>
+      <i class="fas fa-long-arrow-alt-left"></i>See more studios
+    <% end %>
+  </div>
 </div>
 
-<div class="booking-cards container mt-5">
-  <% @bookings.each do |booking| %>
-  <div class="card-body">
-    <h5>Booking Schedule</h5>
-    <p><strong>Check-In:</strong><br><%= "#{(booking.start_date).strftime('%b %dth, %Y %H:%M')}"%></p>
-    <p><strong>Check-Out:</strong><br><%= "#{(booking.end_date).strftime('%b %dth, %Y %H:%M')}"%></p>
-    <p><strong>Status:</strong> <%= booking.status %></p>
-    <div class="edit-booking">
-    <%= link_to edit_booking_path(booking) do %>
-      <p>EDIT<i class="far fa-edit"></i></p>
-    <% end %>
-    <%= link_to booking_path(booking), method: :delete, data: { confirm: "Are you sure?"} do %>
-      <p>CANCEL<i class="far fa-window-close"></i></p>
-    <% end %>
-    </div>
-  </div>
-  <% end %>
-</div>
-<div class = "container mt-5">
-  <%= link_to studios_path(query: params[:query]), class: "btn-gradient" do %>
-    <i class="fas fa-long-arrow-alt-left"></i>See more studios
-  <% end %>
-</div>
+
+
+
+
 
 
