@@ -31,10 +31,7 @@ locations_kenn = ['2-24-3 Meguro, Tokyo',
 '5-24-53 Meguro, Tokyo', '4-1-1 Meguro, Tokyo',
 '5-17-8 Meguro, Tokyo']
 
-description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+description = "Centrally located in Meguro. 5 min walk from the station. Spacious studio with newly installed speaker system. Suitable for dancers, yoga, martial arts, etc. Food and drinks allowed. No alcohol."
 
 puts "Deleting database..."
 Booking.delete_all
@@ -69,6 +66,13 @@ cloudinary_http_kenn.each_with_index do |http, idx|
   studio.user = user
   studio.save!
 end
+
+user = User.new(email: 'jose@hotmail.com', password: '1234567', name: 'jose')
+user.save!
+
+user = User.new(email: 'allan@hotmail.com', password: '1234567', name: 'allan')
+user.save!
+
 
 puts "Created!"
 
