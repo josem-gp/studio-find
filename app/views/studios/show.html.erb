@@ -2,18 +2,18 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 p-5">
-    <div class="card-info">
-      <div class="card-details">
-        <p><i class="fas fa-vector-square"></i> <%= @studio.area %> m²</p>
-        <p><i class="fas fa-users"></i> <%= @studio.capacity %></p>
-        <p><i class="fas fa-map-marked-alt"></i> <%= @studio.location %></p>
-        <p><i class="fas fa-yen-sign"></i> <%= @studio.rate %> per hour</p>
+      <div class="card-info">
+        <div class="card-details">
+          <p class="p-top-left"><i class="fas fa-vector-square"></i> <%= @studio.area %> m²</p>
+          <p class="p-top-right"><i class="fas fa-users"></i> <%= @studio.capacity %></p>
+          <p class="p-bottom-left"><i class="fas fa-map-marked-alt"></i> <%= @studio.location %></p>
+          <p class="p-bottom-right"><i class="fas fa-yen-sign"></i> <%= @studio.rate %> per hour</p>
+        </div>
+        <div class="card-description">
+          <h2 class="fw-bold">Description</h2>
+          <p class="m-0"><%= @studio.description %></p>
+        </div>
       </div>
-      <div class="card-description">
-        <h2 class="fw-bold">Description</h2>
-        <p class="m-0"><%= @studio.description %></p>
-      </div>
-    </div>
     </div>
     <div class="form col-md-4">
       <h3>Book Your Studio:</h3>
