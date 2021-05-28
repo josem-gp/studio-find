@@ -3,7 +3,7 @@
   <%= f.input :end_date, html5: true  %>
   <%= hidden_field_tag :query, params[:query]  %>
   <% if @booking.id %>
-    <%= f.submit 'Update', class: "btn-gradient" %>
+    <%= f.submit 'Update', class: "btn-gradient", data: { confirm: "Are you sure?"} %>
   <% else %>
     <%= f.submit 'Book Studio', class: "btn-gradient mt-3" %>
   <% end %>
