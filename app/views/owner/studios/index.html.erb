@@ -4,15 +4,15 @@
   </div>
 </div>
   <%= render 'modal' %>
-<div class="container mt-4">
+<div class="container mt-4 mb-5">
   <div class="owner-cards">
     <% @studios.each do |studio| %>
       <div class="card-body">
         <%= cl_image_tag(studio.photos.first.key, class: 'card-body-img', crop: :fill) if studio.photos.attached? %>
         <p class="card-title mb-0 mt-3 font-weight-bold"><%= studio.name %></p>
-        <p class="card-text mb-0"><%= "Address: #{studio.location}" %></p>
+        <p class="card-text mb-0"><i class="fas fa-map-marked-alt"></i> <%= studio.location %></p>
         <div class="select d-flex justify-content-between">
-          <p class="card-text mb-0"><%= "Rate: ¥#{studio.rate} per hour" %></p>
+          <p class="card-text mb-0"><i class="fas fa-yen-sign"></i> <%= studio.rate %> per hour</p>
           <%= link_to studio_path(studio) do %>
             <i class="fas fa-arrow-circle-right"></i>
           <% end %>
