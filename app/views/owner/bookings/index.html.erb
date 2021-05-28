@@ -3,22 +3,21 @@
     <h1>Your Studios' Bookings</h1>
   </div>
 </div>
-
-<div class="container">
+<div class="container mt-5">
   <% @bookings.each do |b| %>
-  <div class="cards-booking">
-    <div>
-      <%= cl_image_tag(b.studio.photos.first.key, width: 240, height: 120, crop: :fill, class: "image-booking") %>
-    </div>
-    <div class="cards-booking-details">
-      <p><strong><%= b.studio.name %> </strong></p>
-      <p><em>Booked by: <%= b.user.name %></em></p>
-      <p><i class="far fa-calendar-alt"></i> <%= b.start_date.strftime('%b %dth, %Y %H:%M') %> ~ <%= b.end_date.strftime('%b %dth, %Y %H:%M') %></p>
-      <p><em><%= b.status.capitalize %></em></p>
-    </div>
-    <div class="cards-confirmation">
-      <% if b.pending? %>
-        <p class="mb-2">Confirm Booking?</p>
+    <div class="cards-booking my-5">
+      <div>
+        <%= cl_image_tag(b.studio.photos.first.key, width: 240, height: 120, crop: :fill, class: "image-booking") %>
+      </div>
+      <div class="cards-booking-details">
+        <p><strong><%= b.studio.name %> </strong></p>
+        <p><em>Booked by: <%= b.user.name %></em></p>
+        <p><i class="far fa-calendar-alt"></i> <%= b.start_date.strftime('%b %dth, %Y %H:%M') %> ~ <%= b.end_date.strftime('%b %dth, %Y %H:%M') %></p>
+        <p><em><%= b.status.capitalize %></em></p>
+      </div>
+      <div class="cards-confirmation">
+        <% if b.pending? %>
+          <p class="mb-2">Confirm Booking?</p>
           <div class="d-flex">
             <div>
               <%= simple_form_for(b, remote: true, url: owner_booking_path(b)) do |f| %>
@@ -33,8 +32,8 @@
               <% end %>
             </div>
           </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
