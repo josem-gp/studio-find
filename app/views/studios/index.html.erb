@@ -1,9 +1,9 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/6538903/pexels-photo-6538903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
   <div class="container">
-    <% if @place %>
-    <h1>Studios Near <%= @place.capitalize %></h1>
+    <% unless @place == '' %>
+    <h1>Studios <%= "near #{@place.capitalize}" %></h1>
     <% else  %>
-    <h1>Studios Near Meguro</h1>
+    <h1>Studios</h1>
     <% end %>
   </div>
 </div>
