@@ -1,6 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/6538903/pexels-photo-6538903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
   <div class="container">
-    <% unless @place == '' %>
+    <% unless @place.blank? %>
     <h1>Studios <%= "near #{@place.capitalize}" %></h1>
     <% else  %>
     <h1>Studios</h1>
@@ -16,7 +16,7 @@
         <p class="card-text mb-0"><%= "Address: #{studio.location}" %></p>
         <div class="select d-flex justify-content-between">
           <p class="card-text mb-0"><%= "Rate: ¥#{studio.rate} per hour" %></p>
-          <%= link_to studio_path(studio) do %>
+          <%= link_to studio_path(studio, query: params[:query]) do %>
             <i class="fas fa-arrow-circle-right text-primary"></i>
           <% end %>
         </div>

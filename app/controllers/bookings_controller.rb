@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.studio = Studio.find(params[:studio_id])
     authorize @booking
     if @booking.save
-      redirect_to bookings_path
+      redirect_to bookings_path(query: params[:query])
     else
       render :new
     end
