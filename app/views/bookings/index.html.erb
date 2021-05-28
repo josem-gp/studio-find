@@ -6,11 +6,11 @@
 
 <div class="container">
   <% @bookings.each do |b| %>
-  <div class="cards-owner-booking">
+  <div class="cards-booking mt-5">
     <div>
-      <%= cl_image_tag(b.studio.photos.first.key, width: 240, height: 120, crop: :fill, class: "image-owner-booking") %>
+      <%= cl_image_tag(b.studio.photos.first.key, width: 240, height: 120, crop: :fill, class: "image-booking") %>
     </div>
-    <div class="cards-owner-booking-grow">
+    <div class="cards-booking-details">
       <p><strong><%= b.studio.name %> </strong></p>
       <p><em><%= b.studio.location %></em></p>
       <p><i class="far fa-calendar-alt"></i> <%= b.start_date.strftime('%b %dth, %Y %H:%M') %> ~ <%= b.end_date.strftime('%b %dth, %Y %H:%M') %></p>
@@ -30,8 +30,8 @@
     </div>
   </div>
   <% end %>
-  <div class="mt-3">
-    <%= link_to studios_path(query: params[:query]), class: "btn-gradient mb-5" do %>
+  <div class="my-5">
+    <%= link_to studios_path(query: params[:query]), class: "btn-gradient" do %>
     <i class="fas fa-caret-left"></i> See more studios
     <% end %>
   </div>
