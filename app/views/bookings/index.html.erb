@@ -8,7 +8,7 @@
     <h5>Booking Schedule</h5>
     <p><strong>Check-In:</strong><br><%= "#{(booking.start_date).strftime('%b %dth, %Y %H:%M')}"%></p>
     <p><strong>Check-Out:</strong><br><%= "#{(booking.end_date).strftime('%b %dth, %Y %H:%M')}"%></p>
-    <p><strong>Status:</strong> <%= "#{booking.status ? "Confirmed" : "Pending"}"%></p>
+    <p><strong>Status:</strong> <%= booking.status %></p>
     <div class="edit-booking">
     <%= link_to edit_booking_path(booking) do %>
       <p>EDIT<i class="far fa-edit"></i></p>
@@ -21,8 +21,8 @@
   <% end %>
 </div>
 <div class = "container mt-5">
-  <%= link_to studios_path, class: "btn-gradient" do %>
-    <i class="fas fa-long-arrow-alt-left"></i> See more studios
+  <%= link_to studios_path(query: params[:query]), class: "btn-gradient" do %>
+    <i class="fas fa-long-arrow-alt-left"></i>See more studios
   <% end %>
 </div>
 
