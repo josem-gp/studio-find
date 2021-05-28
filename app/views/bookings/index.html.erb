@@ -16,18 +16,7 @@
       <p><i class="far fa-calendar-alt"></i> <%= b.start_date.strftime('%b %dth, %Y %H:%M') %> ~ <%= b.end_date.strftime('%b %dth, %Y %H:%M') %></p>
       <p><em><%= b.status.capitalize %></em></p>
     </div>
-    <div class="cards-confirmation">
-      <% if b.pending? %>
-        <div class="edit-booking d-flex flex-column align-items-end text-dark">
-        <%= link_to edit_booking_path(b) do %>
-        <p>edit<i class="far fa-edit text-success"></i></p>
-        <% end %>
-        <%= link_to booking_path(b), method: :delete, data: { confirm: "Are you sure?"} do %>
-        <p>cancel<i class="far fa-window-close text-warning"></i></p>
-        <% end %>
-        </div>
-      <% end %>
-    </div>
+    <%= render 'button_update', b: b %>
   </div>
   <% end %>
   <div class="mt-3">
