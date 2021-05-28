@@ -6,7 +6,9 @@
         <div class="ml-1">StudioFind</div>
       </div>
     <% end %>
-    <%= render "shared/search", class: "ml-5" %>
+    <% unless current_page?(root_path) %>
+      <%= render "shared/search", class: "ml-5" %>
+    <% end %>
   </div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
