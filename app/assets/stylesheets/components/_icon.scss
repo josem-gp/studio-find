@@ -1,3 +1,13 @@
 .banner-icon {
   margin: 0px 8px 0px 0px;
 }
+
+i {
+  color: $blue;
+  opacity: .85;
+  transition: opacity 500ms ease;
+}
+
+i:hover {
+  opacity: 1;
+}

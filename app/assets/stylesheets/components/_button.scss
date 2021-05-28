@@ -7,6 +7,9 @@
   transition: background-color 500ms ease;
   border: none;
   opacity: .85;
+  i {
+    color: white;
+  }
 }
 
 .btn-gradient:hover {
