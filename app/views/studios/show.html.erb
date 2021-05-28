@@ -2,20 +2,28 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 p-5">
+    <div class="card-info">
       <div class="card-details">
-        <p><i class="fas fa-home"></i> </p>
+        <p><i class="fas fa-vector-square"></i> </p>
         <p><i class="fas fa-users"></i> </p>
         <p><i class="fas fa-map-marked-alt"></i> <%= @studio.location %></p>
         <p><i class="fas fa-yen-sign"></i> <%= @studio.rate %> per hour</p>
       </div>
       <div class="card-description">
         <h2 class="fw-bold">Description</h2>
-        <p class="m-0">studio.desription</p>
+        <p class="m-0">🚉 Close proximity to the station</p>
+        <p class="m-0">🅿 Parking lot available</p>
+        <p class="m-0">🍵 Snacks & drinks provided</p>
+        <p class="m-0">🕛 Hour extension possible (if available)</p>
       </div>
     </div>
-    <div class="form form-shadow col-md-4">
-      <h3>Book your Studio:</h3>
+    </div>
+    <div class="form col-md-4">
+      <h3>Book Your Studio:</h3>
       <%= render 'shared/form' %>
     </div>
+    <%= link_to bookings_path, class: "btn-gradient ml-5 mb-5" do %>
+      <i class="fas fa-caret-left"></i> Back to My Bookings
+    <% end %>
   </div>
 </div>
