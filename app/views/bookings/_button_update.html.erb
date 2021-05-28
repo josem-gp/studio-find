@@ -1,0 +1,12 @@
+<div class="cards-confirmation">
+  <div class="edit-booking d-flex flex-column align-items-end text-dark">
+    <% if b.pending? %>
+      <%= link_to edit_booking_path(b) do %>
+      <p>edit<i class="far fa-edit text-success"></i></p>
+      <% end %>
+    <% end %>
+    <%= link_to booking_path(b), method: :delete, data: { confirm: "Are you sure?"} do %>
+    <p>cancel<i class="far fa-window-close text-warning"></i></p>
+    <% end %>
+  </div>
+</div>
