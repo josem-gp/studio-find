@@ -40,8 +40,17 @@
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 16px;
-  p {
-    margin: 16px;
+  .p-top-left {
+    margin: 32px 16px 16px 32px;
+  }
+  .p-top-right {
+    margin: 32px 32px 16px 16px;
+  }
+  .p-bottom-right {
+    margin: 16px 32px 32px 16px;
+  }
+  .p-bottom-left {
+    margin: 16px 16px 32px 32px;
   }
 }
 
@@ -50,7 +59,7 @@
   background-color: white;
   border-radius: 16px;
   width: 100%;
-  padding: 16px;
+  padding: 32px;
   flex-grow: 1;
   h2 {
     font-weight: bold;
@@ -66,6 +75,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  border-radius: 8px;
 }
 
 .card-product img {
@@ -107,7 +117,7 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
   width: 100%;
