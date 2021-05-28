@@ -1,19 +1,36 @@
 .btn-gradient {
-  color: $black;
+  color: $white;
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient($mint-green, $light-blue);
-  transition: background 500ms ease;
-  border: 1px solid $light-blue;
+  background-color: $blue;
+  transition: background-color 500ms ease;
+  border: none;
+  opacity: .85;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient($light-blue, $sea-blue)
+  opacity: 1;
+  text-decoration: none;
+}
+
+.btn-black {
+  color: $white;
+  background-color: $black;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: none;
+  opacity: .85;
+}
+
+.btn-black:hover {
+  opacity: 1;
+  transition: background-color opacity 500ms ease;
 }
 
 .btn-booking-confirm {
-  background-color: $un-blue;
+  background-color: $blue;
   width: 88px;
   height: 32px;
   border-radius: 16px;
