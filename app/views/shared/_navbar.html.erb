@@ -6,16 +6,20 @@
         <div class="ml-1">StudioFind</div>
       </div>
     <% end %>
-    <%= render "shared/search", class: "ml-5" %>
+    <% unless current_page?(root_path) %>
+      <%= render "shared/search", class: "ml-5" %>
+    <% end %>
   </div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://avatars.githubusercontent.com/u/80769492?v=4" />
+          <% avatar = current_user.studios.blank? ? "https://avatars.githubusercontent.com/u/80769492?v=4" : "https://avatars.githubusercontent.com/u/53637961?v=4" %>
+          <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src=<%=avatar%>% />
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Your Bookings", bookings_path, class: "dropdown-item" %>
-            <%= link_to "Your Studios", owner_studios_path, class: "dropdown-item" %>
+            <%= link_to "Profile", bookings_path, class: "dropdown-item" %>
+            <%= current_user.studios.blank? ? (link_to "My Bookings", bookings_path, class: "dropdown-item") : (link_to "Customer Bookings", owner_bookings_path, class: "dropdown-item") %>
+            <%= link_to "My Studios", owner_studios_path, class: "dropdown-item" unless current_user.studios.blank? %>
             <%= link_to "Logout", destroy_user_session_path, method: :delete,  class: "dropdown-item" %>
           </div>
         </li>
