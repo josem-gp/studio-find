@@ -12,6 +12,7 @@
 .btn-gradient:hover {
   opacity: 1;
   text-decoration: none;
+  color: $white;
 }
 
 .btn-black {
@@ -27,6 +28,7 @@
 .btn-black:hover {
   opacity: 1;
   transition: background-color opacity 500ms ease;
+  text-decoration: none;
 }
 
 .btn-booking-confirm {
