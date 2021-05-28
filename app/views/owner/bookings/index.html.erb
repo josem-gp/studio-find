@@ -23,7 +23,7 @@
             </div>
             <div>
               <%= simple_form_for(b, remote: true, url: owner_booking_path(b)) do |f| %>
-                <%= f.input :status, as: :hidden, input_html: { value: 'denied' } %>
+                <%= f.input :status, as: :hidden, input_html: { value: 'declined' } %>
                 <%= f.submit "Decline", class: "btn-booking-confirm" %>
               <% end %>
             </div>

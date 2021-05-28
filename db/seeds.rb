@@ -66,6 +66,10 @@ cloudinary_http_kenn.each_with_index do |http, idx|
   studio.save!
 end
 
+puts "Creating bookings"
+
+
+
 puts "Created!"
 
 puts "Done!"
