@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'faker'
 require "open-uri"
 
 cloudinary_http_lena = %w[https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005017/03s7d0wzreijr8ztbodx7m6ytvfg.jpg
@@ -18,9 +17,9 @@ https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009029/jdfm6bzp380pkonrvf
 https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009030/c2e8rwyn6vutc1lnfsxp5cl0bzdi.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005027/mxx24iz2g3uo1dg9lb3ls3g0kql9.jpg
 https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009027/9ob257ylx75twc8fwcv6carir4mq.jpg]
 
-description_lena = ""
+name_lena = %w[Metropolis\ Studio Aqua\ Studio Page\ Studio Studio\ Reflect Covert\ Studio]
 
-description_kenn = ""
+name_kenn = %w[Here\ Studio Podium\ Studio Nets\ Studio Analog\ Studio Exeter\ Studio Crane\ Studio Studio\ Merge Studio\ Laurel]
 
 locations_lena = ['2-12-6 Meguro, Tokyo', '1-36-6 Meguro, Tokyo',
 '2-8-21 Meguro, Tokyo', '5-27-16 Meguro, Tokyo',
@@ -31,6 +30,11 @@ locations_kenn = ['2-24-3 Meguro, Tokyo',
 '1-11-18 Meguro, Tokyo', '2-4-36 Meguro, Tokyo',
 '5-24-53 Meguro, Tokyo', '4-1-1 Meguro, Tokyo',
 '5-17-8 Meguro, Tokyo']
+
+description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
 puts "Deleting database..."
 Booking.delete_all
@@ -45,7 +49,7 @@ user.save!
 
 cloudinary_http_lena.each_with_index do |http, idx|
   file = URI.open(http)
-  studio = Studio.new(name: Faker::Company.name , rate: rand(800..3000), location: locations_lena[idx], capacity: rand(5..20), area: rand(20..60))
+  studio = Studio.new(name: name_lena[idx], rate: rand(800..3000), location: locations_lena[idx], capacity: rand(5..20), area: rand(20..60), description: description)
   studio.photos.attach(io: file, filename: 'studio.jpg', content_type: 'image/jpg')
   studio.user = user
   studio.save!
@@ -60,7 +64,7 @@ user.save!
 
 cloudinary_http_kenn.each_with_index do |http, idx|
   file = URI.open(http)
-  studio = Studio.new(name: Faker::Company.name , rate: rand(800..3000), location: locations_kenn[idx])
+  studio = Studio.new(name: name_kenn[idx], rate: rand(800..3000), location: locations_kenn[idx], capacity: rand(5..20), area: rand(20..60), description: description)
   studio.photos.attach(io: file, filename: 'studio.jpg', content_type: 'image/jpg')
   studio.user = user
   studio.save!
