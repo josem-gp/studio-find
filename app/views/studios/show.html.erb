@@ -19,8 +19,10 @@
       <h3>Book Your Studio:</h3>
       <%= render 'shared/form' %>
     </div>
-    <%= link_to bookings_path, class: "btn-gradient ml-5 mb-5" do %>
-      <i class="fas fa-caret-left"></i> Back to My Bookings
-    <% end %>
+    <div class="ml-5 mb-5">
+      <%= link_to bookings_path, class: "btn-gradient" do %>
+        <i class="fas fa-caret-left"></i> Back to My Bookings
+      <% end %>
+    </div>
   </div>
 </div>
