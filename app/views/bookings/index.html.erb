@@ -30,10 +30,9 @@
     </div>
   </div>
   <% end %>
-
-  <div class = "container mt-5">
-    <%= link_to studios_path(query: params[:query]), class: "btn-gradient" do %>
-      <i class="fas fa-long-arrow-alt-left"></i>See more studios
+  <div class="mt-3">
+    <%= link_to studios_path(query: params[:query]), class: "btn-gradient mb-5" do %>
+    <i class="fas fa-caret-left"></i> See more studios
     <% end %>
   </div>
 </div>
