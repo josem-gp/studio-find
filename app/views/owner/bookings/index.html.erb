@@ -6,7 +6,7 @@
 
 <div class="container">
   <% @bookings.each do |b| %>
-  <div class="cards-booking">
+  <div class="cards-booking mt-3">
     <div>
       <%= cl_image_tag(b.studio.photos.first.key, width: 240, height: 120, crop: :fill, class: "image-booking") %>
     </div>
