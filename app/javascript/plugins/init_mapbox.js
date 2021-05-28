@@ -17,14 +17,16 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/lenanamiki/ckp4tn9lk2x5i17pjs4niif0g'
     });
-    const markers = JSON.parse(mapElement.dataset.markers);
+    const markers = JSON.parse(mapElement.dataset.markers); //array of markers
     markers.forEach((marker) => {
-    const popup = new mapboxgl.Popup().setHTML(marker.info_window);
+      const popup = new mapboxgl.Popup().setHTML(marker.info_window);
+      const markerHtml = document.createElement('div')
+      markerHtml.innerHTML = marker.marker
 
-    new mapboxgl.Marker()
-      .setLngLat([ marker.lng, marker.lat ])
-      .setPopup(popup)
-      .addTo(map);
+      new mapboxgl.Marker(markerHtml)
+        .setLngLat([ marker.lng, marker.lat ])
+        .setPopup(popup)
+        .addTo(map);
     });
     fitMapToMarkers(map, markers);
   }
