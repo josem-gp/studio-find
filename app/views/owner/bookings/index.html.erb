@@ -14,14 +14,20 @@
     <div class="cards-confirmation">
       <% if b.pending? %>
         <p class="mb-2">Confirm Booking?</p>
-        <%= simple_form_for(b, remote: true, url: owner_booking_path(b)) do |f| %>
           <div class="d-flex">
-            <%= f.input :status, as: :hidden, input_html: { value: 'confirmed' } %>
-            <%= f.submit "Confirm", class: "btn-booking-confirm" %>
-            <%= f.input :status, as: :hidden, input_html: { value: 'denied' } %>
-            <%= f.submit "Reject", class: "btn-booking-confirm" %>
+            <div>
+              <%= simple_form_for(b, remote: true, url: owner_booking_path(b)) do |f| %>
+                <%= f.input :status, as: :hidden, input_html: { value: 'confirmed' } %>
+                <%= f.submit "Confirm", class: "btn-booking-confirm" %>
+              <% end %>
+            </div>
+            <div>
+              <%= simple_form_for(b, remote: true, url: owner_booking_path(b)) do |f| %>
+                <%= f.input :status, as: :hidden, input_html: { value: 'denied' } %>
+                <%= f.submit "Decline", class: "btn-booking-confirm" %>
+              <% end %>
+            </div>
           </div>
-        <% end %>
       <% end %>
     </div>
     </div>
