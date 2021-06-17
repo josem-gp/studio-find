@@ -7,29 +7,30 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 
-cloudinary_http_lena = %w[https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005017/03s7d0wzreijr8ztbodx7m6ytvfg.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005020/szcknrej0o4qh5b3jbgq6kc6hvb0.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005703/od89qzjj2jggo4k0afd19ph3u69s.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009023/wdxrc8w9du32eofeukjbp969u9t5.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005700/4u81i8qdj7gl2we88e4ez77l7tdw.jpg]
+cloudinary_http_lena = %w[https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996460/Studios-seed/studio13_m17zno.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996460/Studios-seed/studio14_tnq9mb.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996460/Studios-seed/studio16_trcwtd.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996460/Studios-seed/studio12_mxyeps.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996460/Studios-seed/studio15_e68eyk.jpg]
 
-cloudinary_http_kenn = %w[https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009028/uqolnnbfq7nzzhzv93nnh9b5qm1g.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009022/968jt3ni57sh8i4b4h7veu2azfnc.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005025/mm2fnz4y65rqgkxagef1djz1qm6z.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009029/jdfm6bzp380pkonrvfwi9lz3z98c.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005022/5xrhm36wuh6k2iptglwrafkkmsxa.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009030/c2e8rwyn6vutc1lnfsxp5cl0bzdi.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1622005027/mxx24iz2g3uo1dg9lb3ls3g0kql9.jpg
-https://res.cloudinary.com/dqjzulqyf/image/upload/v1622009027/9ob257ylx75twc8fwcv6carir4mq.jpg]
+
+cloudinary_http_kenn = %w[https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996459/Studios-seed/studio11_tua6r4.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996450/Studios-seed/studio2_u1l9fv.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996450/Studios-seed/studio1_hs7hww.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996450/Studios-seed/studio3_dvqked.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996450/Studios-seed/studio4_jqhfte.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996442/Studios-seed/studio8_ml8msg.jpg https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996442/Studios-seed/studio7_uglnuo.jpg
+https://res.cloudinary.com/dqjzulqyf/image/upload/v1621996442/Studios-seed/studio6_zxvwoh.jpg]
 
 name_lena = %w[Metropolis\ Studio Aqua\ Studio Page\ Studio Studio\ Reflect Covert\ Studio]
 
 name_kenn = %w[Here\ Studio Podium\ Studio Nets\ Studio Analog\ Studio Exeter\ Studio Crane\ Studio Studio\ Merge Studio\ Laurel]
 
 locations_lena = ['2-12-6 Meguro, Tokyo', '1-36-6 Meguro, Tokyo',
-'2-8-21 Meguro, Tokyo', '5-27-16 Meguro, Tokyo',
-'6-18-11 Meguro, Tokyo']
+                  '2-8-21 Meguro, Tokyo', '5-27-16 Meguro, Tokyo',
+                  '6-18-11 Meguro, Tokyo']
 
 locations_kenn = ['2-24-3 Meguro, Tokyo',
-'4-6-6 Meguro, Tokyo', '1-3-25 Meguro, Tokyo',
-'1-11-18 Meguro, Tokyo', '2-4-36 Meguro, Tokyo',
-'5-24-53 Meguro, Tokyo', '4-1-1 Meguro, Tokyo',
-'5-17-8 Meguro, Tokyo']
+                  '4-6-6 Meguro, Tokyo', '1-3-25 Meguro, Tokyo',
+                  '1-11-18 Meguro, Tokyo', '2-4-36 Meguro, Tokyo',
+                  '5-24-53 Meguro, Tokyo', '4-1-1 Meguro, Tokyo',
+                  '5-17-8 Meguro, Tokyo']
 
 description = "Centrally located in Meguro. 5 min walk from the station. Spacious studio with newly installed speaker system. Suitable for dancers, yoga, martial arts, etc. Food and drinks allowed. No alcohol."
 
@@ -77,4 +78,3 @@ user.save!
 puts "Created!"
 
 puts "Done!"
-
