@@ -1,0 +1,36 @@
+.index-studios {
+  display: flex;
+  justify-content: space-around;
+  margin: 48px 48px 0 48px;
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .index-studios {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    margin: 0;
+  }
+  #map {
+    margin: 0 0 120px 0;
+    width: 100%;
+    height: 80vh;
+    order: -1;
+    position: relative;
+  }
+  .cards {
+    margin: 32px;
+    .card-body {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+}

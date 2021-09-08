@@ -7,7 +7,7 @@
     <% end %>
   </div>
 </div>
-<div class="container d-flex justify-content-between mt-5">
+<div class="index-studios">
   <div class="cards">
     <% @studios.each do |studio| %>
       <div class="card-body" data-id="<%= studio.id %>">
@@ -21,7 +21,6 @@
     <% end %>
   </div>
   <div id="map"
-    style="width: 533px; height: 600px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
