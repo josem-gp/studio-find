@@ -31,9 +31,15 @@
   display: flex;
   justify-content: space-between;
 }
+.banner-search {
+  margin-left: 32px;
+}
 
 @media (max-width: 576px) {
   .navbar-left .nav-link {
     padding-left: 0;
+  }
+  .banner-search {
+    display: none;
   }
 }
