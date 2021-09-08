@@ -10,7 +10,7 @@
       <%= render "shared/search", class: "ml-5" %>
     <% end %>
   </div>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
@@ -31,3 +31,4 @@
     </ul>
   </div>
 </div>
+<%# Removed class="collapse navbar-collapse" on line 13 to stop login from disappearing in mobile view %>
