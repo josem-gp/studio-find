@@ -1,7 +1,14 @@
+.studio-info {
+  padding: 48px 16px 48px 32px;
+  // padding-left: 32px;
+  // padding-right: 16px;
+}
+
+.studio-form {
+  padding: 48px 32px 48px 16px;
+}
 .form {
   padding: 32px;
-  margin-top: 48px;
-  margin-bottom: 48px;
   border-radius: 16px;
   h3{
     margin:0;
@@ -10,4 +17,13 @@
 
 .form-shadow {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media (max-width: 768px) {
+  .studio-info {
+    padding: 48px 32px 16px 32px;
+  }
+  .studio-form {
+    padding: 16px 32px 48px 32px;
+  }
 }
