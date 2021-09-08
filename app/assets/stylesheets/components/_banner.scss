@@ -2,13 +2,11 @@
   background-size: cover;
   background-position: center;
   height: 50vh;
-  // padding: 100px 0;
-  // background-size: cover;
-  // padding: 120px;
   .banner-text {
     position: absolute;
     left: 13%;
     top: 24%;
+    max-width: 500px;
   }
   i {
     color: white;
@@ -38,3 +36,12 @@
   background-position: 0% 21%;
 }
 
+@media (max-width: 376px) {
+  .banner {
+    background-position: 20%;
+    .banner-text {
+      left: 5%;
+      top: 25%;
+    }
+  }
+}

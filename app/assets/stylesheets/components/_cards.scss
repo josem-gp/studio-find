@@ -89,12 +89,12 @@
 .card-product {
   overflow: hidden;
   height: 200px;
-  width: 450px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   border-radius: 8px;
+  max-width: 450px;
 }
 
 .card-product img {
@@ -121,10 +121,6 @@
   padding: 16px;
 }
 
-.card-review {
-  display: flex;
-}
-
 .card-category {
   background-size: cover;
   background-position: center;
@@ -143,7 +139,6 @@
   padding: 32px;
   flex-direction: column;
   text-align: end;
-  margin: 32px;
 }
 
 .card-category-link {
@@ -164,7 +159,16 @@
 .cards-home-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  // padding: 0 64px 0 64px;
+  // height: 480px;
+  .cards-home-container-left {
+    display: flex;
+    flex-direction: column;
+  }
+  .cards-home-container-right {
+    height: 100%;
+  }
 }
 
 .cards-home-intro {
@@ -213,4 +217,85 @@
   padding: 8px;
   margin-right: 16px;
   text-align: center;
+}
+
+
+// Media Queries
+
+@media (max-width: 1200px) {
+  .cards-home-container-left {
+    margin-right: 16px;
+    .card-product-infos h2 {
+      font-size: 1.3vw;
+    }
+    .card-product-infos p {
+      font-size: 1.2vw;
+    }
+  } 
+  .cards-home-container-right {
+    margin-left: 16px;
+  } 
+}
+// @media (max-width: 992px) {
+//   .card-product-infos h2 {
+//     font-size: 14px;
+//   }
+// }
+@media (max-width: 768px) {
+  .cards-home-intro p {
+    width: 100%;
+    padding: 0 24px 0 24px;
+  }
+  .cards-home-container {
+    display: block;
+    .cards-home-container-left {
+      margin: 0 32px 32px 32px;
+      align-items: center;
+      .card-product-infos h2 {
+        font-size: 2.2vw;
+      }
+      .card-product-infos p {
+        font-size: 2vw;
+      }
+    }
+    .cards-home-container-right {
+      margin: 64px 32px 0 32px;
+      .card-category {
+        height: 400px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .card-product-infos h2 {
+    font-size: 2.5vw !important;
+  }
+  .card-product-infos p {
+    font-size: 2.3vw !important;
+  }
+}
+
+@media (max-width: 376px) {
+  .card-product-infos h2 {
+    font-size: 3.5vw !important;
+  }
+  .card-product-infos p {
+    font-size: 3.2vw !important;
+  }
+  .footer {
+    flex-direction: column;
+    height: auto !important;
+    // justify-content: center !important;
+    // align-items: center;
+    .footer-about {
+      display: none;
+    }
+  }
+  .banner .banner-text {
+    left: 5%;
+  }
 }
