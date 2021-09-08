@@ -3,11 +3,7 @@
   background-position: center;
   height: 50vh;
   // padding: 100px 0;
-}
-
-.banner-home {
-  background-size: cover;
-  background-position: 0% 21%;
+  // background-size: cover;
   // padding: 120px;
   .banner-text {
     position: absolute;
@@ -18,23 +14,27 @@
     color: white;
     opacity: 1;
   }
+  h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 20px;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  .banner-search {
+    width: 290px;
+  }
 }
 
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+.banner-home {
+  background-position: 0% 21%;
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
-.banner-search {
-  width: 290px;
-}
