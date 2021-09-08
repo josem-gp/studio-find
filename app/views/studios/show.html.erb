@@ -1,7 +1,7 @@
 <%= render 'shared/banner', studio: @studio.name, img_path: cl_image_path(@studio.photos.first.key) %>
 <div class="container">
   <div class="row">
-    <div class="col-md-8 p-5">
+    <div class="col-md-8 studio-info">
       <div class="card-info">
         <div class="card-details">
           <p class="p-top-left"><i class="fas fa-vector-square"></i> <%= @studio.area %> m²</p>
@@ -15,9 +15,11 @@
         </div>
       </div>
     </div>
-    <div class="form col-md-4">
-      <h3>Book Your Studio:</h3>
-      <%= render 'shared/form' %>
+    <div class="studio-form col-md-4">
+      <div class="form">
+        <h3>Book Your Studio:</h3>
+        <%= render 'shared/form' %>
+      </div>
     </div>
     <div class="ml-5 mb-5">
       <%= link_to bookings_path, class: "btn-gradient" do %>
