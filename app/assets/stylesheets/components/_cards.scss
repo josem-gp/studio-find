@@ -247,6 +247,7 @@
     padding: 0 24px 0 24px;
   }
   .cards-home-container {
+    margin: 48px 0 72px 0;
     display: block;
     .cards-home-container-left {
       margin: 0 32px 32px 32px;
@@ -285,17 +286,5 @@
   }
   .card-product-infos p {
     font-size: 3.2vw !important;
-  }
-  .footer {
-    flex-direction: column;
-    height: auto !important;
-    // justify-content: center !important;
-    // align-items: center;
-    .footer-about {
-      display: none;
-    }
-  }
-  .banner .banner-text {
-    left: 5%;
   }
 }

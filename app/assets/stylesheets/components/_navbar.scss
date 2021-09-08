@@ -32,3 +32,9 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 576px) {
+  .navbar-left .nav-link {
+    padding-left: 0;
+  }
+}

@@ -36,12 +36,13 @@
   background-position: 0% 21%;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 576px) {
   .banner {
-    background-position: 20%;
+    background-position: 28%;
     .banner-text {
-      left: 5%;
+      left: 7%;
       top: 25%;
+      max-width: 300px;
     }
   }
 }
