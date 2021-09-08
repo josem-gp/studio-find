@@ -6,7 +6,7 @@
         <div class="ml-1">StudioFind</div>
       </div>
     <% end %>
-    <% unless current_page?(root_path) %>
+    <% unless current_page?(root_path) || current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
       <%= render "shared/search", class: "ml-5" %>
     <% end %>
   </div>
