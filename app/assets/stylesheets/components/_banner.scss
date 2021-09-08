@@ -1,13 +1,19 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 100px 0;
+  height: 50vh;
+  // padding: 100px 0;
 }
 
 .banner-home {
   background-size: cover;
   background-position: 0% 21%;
-  padding: 120px;
+  // padding: 120px;
+  .banner-text {
+    position: absolute;
+    left: 13%;
+    top: 24%;
+  }
   i {
     color: white;
     opacity: 1;
